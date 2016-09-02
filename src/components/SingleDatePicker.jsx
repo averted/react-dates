@@ -223,11 +223,12 @@ export default class SingleDatePicker extends React.Component {
       date,
       withPortal,
       withFullScreenPortal,
+      customDateValue,
     } = this.props;
 
     const onOutsideClick = withPortal || withFullScreenPortal ? () => {} : this.onClearFocus;
 
-    const dateValue = toLocalizedDateString(date);
+    const dateValue = customDateValue ? customDateValue(date) : toLocalizedDateString(date);
 
     return (
       <div className="SingleDatePicker">
