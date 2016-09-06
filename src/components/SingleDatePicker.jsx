@@ -27,6 +27,7 @@ const defaultProps = {
   focused: false,
   disabled: false,
 
+  dateLabel() {},
   onDateChange() {},
   onFocusChange() {},
 
@@ -223,12 +224,12 @@ export default class SingleDatePicker extends React.Component {
       date,
       withPortal,
       withFullScreenPortal,
-      customDateValue,
+      dateLabel,
     } = this.props;
 
     const onOutsideClick = withPortal || withFullScreenPortal ? () => {} : this.onClearFocus;
 
-    const dateValue = customDateValue ? customDateValue(date) : toLocalizedDateString(date);
+    const dateValue = dateLabel ? dateLabel(date) : toLocalizedDateString(date);
 
     return (
       <div className="SingleDatePicker">

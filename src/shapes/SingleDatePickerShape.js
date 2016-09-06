@@ -10,6 +10,7 @@ export default {
   focused: PropTypes.bool,
   disabled: PropTypes.bool,
 
+  dateLabel: PropTypes.func,
   onDateChange: PropTypes.func,
   onFocusChange: PropTypes.func,
 
