@@ -10,7 +10,6 @@ export default {
   focused: PropTypes.bool,
   disabled: PropTypes.bool,
 
-  dateLabel: PropTypes.func,
   onDateChange: PropTypes.func,
   onFocusChange: PropTypes.func,
 
@@ -28,6 +27,7 @@ export default {
   onNextMonthClick: PropTypes.func,
 
   // i18n
+  displayLabel: PropTypes.func,
   monthFormat: PropTypes.string,
   phrases: PropTypes.shape({
     closeDatePicker: PropTypes.node,
